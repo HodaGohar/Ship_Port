@@ -42,6 +42,12 @@ nav {
     justify-content: space-between;
     padding: 10px 7%;
     gap: 2rem;
+    /* position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); */
 }
 .logo {
     width: 100px;
@@ -57,9 +63,10 @@ nav {
 .nav-links li a {
     text-decoration: none;
     color: #000;
-    /* color: #fff; */
     font-size: 20px;
     display: block;
+    /* float: left;
+    color: #fff; */
 }
 
 .nav-links li a:hover {
@@ -87,6 +94,7 @@ nav {
     margin: auto;
     color: #fff;
     position: relative;
+   /* padding-top: 150px; */
 }
 .home-content .par{
     font-size: 14px;
