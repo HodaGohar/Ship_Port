@@ -30,7 +30,7 @@ section {
     
     min-height: 100vh;
     width: 100%;
-    background: linear-gradient(rgba(8, 8, 8, 0.5), rgba(0, 0, 0, 0.7)), url(images/port4.jpg);
+    background: linear-gradient(rgba(8, 8, 8, 0.353), rgba(0, 0, 0, 0.868)), url(images/port4.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -89,7 +89,8 @@ nav {
 }
  
 .home-content{
-    width: 1200px;
+    /* width: 1200px; */
+    padding-left: 150px;
     height: auto;
     margin: auto;
     color: #fff;
@@ -141,6 +142,8 @@ nav {
 .home-content span{
     font-size: 55px;
     font-family: 'rye','sans-serif';
+    text-shadow: 5px 1px 2px rgba(176, 218, 231, 0.5);
+
 }
  .about .heading{
     width: 90%;
@@ -336,7 +339,7 @@ nav {
 
 }
 .services .service-column .single-service .content .main-title{
-    margin-bottom: 20px;
+    margin: 20px;
     font-weight: 700;
     font-size: 23px;
     color: #f1f1f1;
@@ -375,6 +378,7 @@ nav {
 .services .service-column .single-service:hover .learn-more::after{
     background-color: #fff;
 }
+
 /* .services .service-column .single-service .circle-before{
     position: absolute;
     top: 0;
@@ -633,6 +637,7 @@ nav {
     color: #333;
     font-size: 18px;
 }
+
 .arrivels h1{
         font-size: 4rem;
         text-align: center;
@@ -720,11 +725,12 @@ nav {
 .booking .book-form .user-details .input-box{
     flex: 1 1 41rem;
 }
-.booking .book-form .user-details .input-box input{
+.booking .book-form .user-details .input-box input,
+.booking .book-form .user-details .input-box select{
     width: 100%;
     padding: 1.2rem 1.4rem;
     font-size: 1.6rem;
-    color: #133045;
+    color: #8ca9be;
     border: .2rem solid rgba(255, 253, 253, 0.1);
     border-radius: .5rem;
     background: #000;
@@ -732,13 +738,19 @@ nav {
     margin-top: 1.5rem;
     
 }
-.booking .book-form .user-details .input-box input:focus{
+.booking .book-form .user-details .input-box input:focus,.booking .book-form .user-details .input-box select:focus
+{
     border-color:rgb(125, 173, 224);
 }
-.booking .book-form .user-details .input-box span{
+.booking .book-form .user-details .input-box span,
+.booking .book-form .user-details .input-box label
+{
     font-size: 2rem;
     color:rgba(255, 253, 253, 0.9);
     
+}
+.booking .book-form .user-details .input-box select option{
+    color: #799ec6;
 }
 .booking .cn{
     margin-top: 2rem;
@@ -748,7 +760,7 @@ nav {
 }
 .booking .cn:hover{
     background: #b8cbdb;
-    color: #000507;
+    color: #011015;
     box-shadow: 0 0 20px rgba(122, 140, 190, 0.9);
 }
 
@@ -822,6 +834,63 @@ footer{
     font-weight: 400;
     margin: 0 5px;
 }
+.header .toggler-checkbox {
+    display: none;
+  }
+  .close-btn {
+    display: none;
+    font-size: 26px;
+    cursor: pointer; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1001;
+  }
+
+  .toggler {
+    display: none;
+    cursor: pointer; 
+    font-size: 28px;
+  }
+  @media (max-width: 1190px) {
+    .toggler {
+      display: block;
+    }
+    .header ul,
+    .close-btn {
+      display: none;
+    }
+    .header .toggler-checkbox:checked ~ .toggler{
+        display: none;
+    }
+  
+    .header .toggler-checkbox:checked ~ ul {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .header .toggler-checkbox:checked ~ .close-btn {
+      display: block;
+    }
+    .header ul li {
+        padding: 5px;
+        border-bottom: 1px solid #fff;
+    }
+    .home-content{
+        width: 100%;
+        padding: 50px;
+    }
+    .footer-nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer-nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+      }
+  }
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -832,19 +901,17 @@ footer{
     html .fa-bars{
         display: block;
     }
-   
     .home-content h1 {
-       font-size: 40px;
-    }
+        font-size: 33px;
+     }
+     .home-content h1 span{
+         font-size: 39px;
+     }
    
     .home-content .cn {
        width: 120px;
        height: 35px;
        font-size: 16px;
-    }
-   
-    .dropdown {
-       width: 200px;
     }
     .footer-nav ul{
         flex-direction: column;
@@ -871,10 +938,7 @@ footer{
        height: 40px;
        font-size: 18px;
     }
-   
-    .dropdown {
-       width: 250px;
-    }
+
    }
    
    /* Medium devices (landscape tablets, 768px and up) */
@@ -884,17 +948,16 @@ footer{
     }
    
     .home-content h1 {
-       font-size: 50px;
+       font-size: 45px;
+    }
+    .home-content h1 span{
+        font-size: 50px;
     }
    
     .home-content .cn {
        width: 160px;
        height: 40px;
        font-size: 18px;
-    }
-   
-    .dropdown {
-       width: 300px;
     }
    }
    
@@ -913,10 +976,6 @@ footer{
        height: 45px;
        font-size: 20px;
     }
-   
-    .dropdown {
-       width: 350px;
-    }
    }
    
    /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -934,8 +993,197 @@ footer{
        height: 50px;
        font-size: 22px;
     }
-   
-    .dropdown {
-       width: 400px;
-    }
    }
+   @media (min-width: 769px) and (max-width: 1024px) {
+    .about .heading h1{
+        font-size: 45px;
+        margin-bottom: 5px;
+    }
+    .services .title {
+        font-size: 28px;
+    }
+
+    .services .description {
+        font-size: 15px;
+    }
+
+    .services .service-column {
+        max-width: 50%;
+        padding: 0 15px;
+    }
+
+    .services .service-column .single-service {
+        padding: 30px 20px;
+    }
+
+    .services .service-column .single-service .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .service-column .single-service .content .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(102, 153, 194);
+        border-radius: 5px;
+    }
+    .services .service-column .single-service:hover .icon{
+        background-color: #fff;
+        color: #0b0b0b;
+        border-radius: 50px;
+        transition: all 0.5s;
+    
+    }
+
+    .services .service-column .single-service .content .main-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .services .service-column .single-service .content .description {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .services .service-column .single-service .content .learn-more {
+        font-size: 17px;
+    }
+    .team {
+        margin: 30px 0; 
+    }
+
+    .team h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .team .profile {
+        width: calc(50% - 20px);
+        margin: 10px;
+        height: auto;
+        padding: 15px; 
+    }
+
+    .profile .img-box {
+        padding-top: 100%;
+        height: 0; 
+        box-shadow: 0 0 15px 0 rgb(57, 137, 207); 
+    }
+
+    .profile .img-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .row .profile h2 {
+        font-size: 24px; 
+    }
+
+    .row .profile h3 {
+        font-size: 20px;
+    }
+
+    .row .profile p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .about .heading h1{
+        font-size: 35px;
+        margin-bottom: 2px;
+    }
+    .services .title {
+        font-size: 24px;
+    }
+
+    .services .description {
+        font-size: 12px;
+    }
+
+    .services .service-column {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .services .service-column .single-service {
+        padding: 20px 15px;
+    }
+
+    .services .service-column .single-service .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .service-column .single-service .content .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(102, 153, 194);
+        border-radius: 5px;
+    }
+    .services .service-column .single-service:hover .icon{
+        background-color: #fff;
+        color: #0b0b0b;
+        border-radius: 50px;
+        transition: all 0.5s;
+    
+    }
+
+    .services .service-column .single-service .content .main-title {
+        padding-top: 5px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .services .service-column .single-service .content .description {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .services .service-column .single-service .content .learn-more {
+        font-size: 16px;
+    }
+    .team h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+    .profile .content {
+        padding: 5px;
+    }
+
+    .profile .content h2 {
+        font-size: 27px;
+    }
+
+    .profile .content h3 {
+        font-size: 22px;
+    }
+
+    .profile .content p {
+        font-size: 18px;
+    }
+
+    .img-box ul {
+        padding: 10px 0;
+    }
+
+    .img-box ul li {
+        width: 25px;
+        height: 25px;
+        margin: 2px;
+        padding: 5px;
+    }
+}

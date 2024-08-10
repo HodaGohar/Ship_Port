@@ -35,6 +35,14 @@
                             <span class="details">password</span>
                             <input type="password" placeholder="Enter password" id="password" value="" name="password" required>
                         </div>
+                        <div class="input-box">
+                            <label for="user_type" class="details">user type</label>
+
+                             <select id="user_type" name="user_type">
+                                  <option value="user">user</option>
+                                 <option value="admin">admin</option>
+                             </select>
+                        </div>
                         <div class="gender-details">
                             <input type="radio" name="gender" id="dot-1" value="male">
                             <input type="radio" name="gender" id="dot-2" value="female">
@@ -55,10 +63,7 @@
                                 </label>
                             </div>
                         </div>
-                        <select name="user_type">
-                            <option value="user">user</option>
-                            <option value="admin">admin</option>
-                        </select>
+                        
             </div>
             <div class="button">
                         <input type="submit" class="btn" name="update_user" value="update user">

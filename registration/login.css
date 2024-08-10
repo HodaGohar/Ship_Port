@@ -329,7 +329,7 @@ form .button input:hover{
     color: #333;
 }
 .page .container .content h3 span{
-    background: rgb(56, 105, 179);
+    background: rgb(27, 54, 95);
     color: #fff;
     border-radius: 5px;
     padding: 0 15px;
@@ -339,7 +339,7 @@ form .button input:hover{
     color: #333;
 }
 .page .container .content h1 span{
-    color: rgb(56, 105, 179);
+    color: rgb(18, 82, 125);
 }
 .page .container .content p{
     font-size: 25px;
@@ -356,7 +356,7 @@ form .button input:hover{
     text-transform: capitalize;
 }
 .page .container .content .btn:hover{
-    background: rgb(56, 105, 179);
+    background: rgb(19, 61, 125);
 }
 .container form p{
     margin-bottom: 5px;

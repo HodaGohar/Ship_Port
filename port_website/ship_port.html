@@ -18,16 +18,18 @@
             <!-- navbar -->
             <nav>
                 <img src="images/logo1.png" class="logo">
+                <input type="checkbox" class="toggler-checkbox" id="toggler-checkbox">
+                <label for="toggler-checkbox" class="toggler">☰</label>
                 <ul class="nav-links">
                     <li><a href="#home">home</a></li>
                     <li><a href="#about">about</a></li>
                     <li><a href="#services">services</a></li>
                     <li><a href="#crew">crew</a></li>
-                    <li><a href="#arrivals">ship trips</a></li>
                     <li><a href="#review">review</a></li>
+                    <li><a href="#booking">book trips</a></li>
                     <li><a href="#contact">contact</a></li>
-
                 </ul>
+                <span class="close-btn" onclick="document.getElementById('toggler-checkbox').checked = false;">×</span>
             </nav>
             <!-- home page content start -->
             <div class="home-content">
@@ -37,7 +39,7 @@
                      <br> tenetur laudantium vitae magnam dolore explicabo.
                       Explicabo libero fugiat eos accusamus doloribus.
                 </p>
-                <button class="cn"><a href="#">Join Now</a></button>
+                <button class="cn"><a href="#booking">Join Now</a></button>
 
             </div>
             <!-- home end -->
@@ -206,7 +208,7 @@
                 </div>
                 <div class="col-md-4 profile">
                     <div class="img-box">
-                        <img src="images/crew1.jpg" class="image-responsive" alt="Profile Image">
+                        <img src="images/crew5.jpg" class="image-responsive" alt="Profile Image">
                         <ul>
                             <a href="#"><li><i class="fa-brands fa-facebook"></i></li></a>
                             <a href="#"><li><i class="fa-brands fa-twitter"></i></li></a>
@@ -261,24 +263,6 @@
                 <div class="col-md-4 profile">
                     <div class="img-box">
                         <img src="images/crew5.jpg" class="image-responsive" alt="Profile Image">
-                        <ul>
-                            <a href="#"><li><i class="fa-brands fa-facebook"></i></li></a>
-                            <a href="#"><li><i class="fa-brands fa-twitter"></i></li></a>
-                            <a href="#"><li><i class="fa-brands fa-linkedin"></i></li></a>
-                        </ul>
-                    </div>
-                    <div class="content">
-                        <h2>mohamed</h2>
-                        <h3>captain</h3>
-                        <p>turkish</p>
-                        <p>22/7/2024</p>
-                        <p>manar@gmail.com</p>      
-                    </div>
-
-                </div>
-                <div class="col-md-4 profile">
-                    <div class="img-box">
-                        <img src="images/crew2.jpg" class="image-responsive" alt="Profile Image">
                         <ul>
                             <a href="#"><li><i class="fa-brands fa-facebook"></i></li></a>
                             <a href="#"><li><i class="fa-brands fa-twitter"></i></li></a>
@@ -487,118 +471,9 @@
      </section> 
     <!-- review section end -->
 
-    <!-- arrivals section start -->
-
-    <section id="arrivals" class="arrivels">
-        <h1 class="heading-title">ship <span>trips</span></h1>
-        <div class="container">
-            <div class="box">
-                <div class="image">
-                    <img src="images/port2.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#">Book Now</a></button>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/port3.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#">Book Now</a></button>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/port4.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#">Book Now</a></button>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/ship0.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#">Book Now</a></button>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/ship1.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#">Book Now</a></button>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/port1.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#">Book Now</a></button>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/port4.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#">Book Now</a></button>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/port3.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#booking">Book Now</a></button>
-                </div>
-            </div>
-            <div class="box">
-                <div class="image">
-                    <img src="images/port2.jpg">
-                </div>
-                <div class="content">
-                    <h3>arrivels</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore, adipisci velit,
-                        expedita et aliquid ipsam explicabo nostrum!</p>
-                        <button class="cn"><a href="#">Book Now</a></button>
-                </div>
-            </div>
-        </div>     
-    </section> 
-
-    <!-- arrivals section end -->
-
     <!-- booking section start -->
 
-    <section class="booking">
+    <section id="booking" class="booking">
         <h1 class="heading-title">book your trip!</h1>
         <form action="book_form.php" method="post" class="book-form">
             <div class="user-details">
@@ -631,14 +506,18 @@
                     <input type="text" placeholder="Enter weight of cargo" id="cargoWeight" name="cargoWeight" required>
                 </div>
                 <div class="input-box">
-                    <span class="details">cargo space</span>
-                    <input type="text" placeholder="Enter cargo space" id="cargoSpace" name="cargoSpace" required>
+                    <span class="details">quantity of cargo</span>
+                    <input type="text" placeholder="Enter quantity of cargo" id="cargoQuantity" name="cargoQuantity" required>
                 </div>
-                
                 <div class="input-box">
-                    <span class="details">payment method</span>
-                    <input type="text" placeholder="Enter prefer payment method" id="paymentMethod" name="paymentMethod" required>
-                </div>
+                    <label for="payment_method" class="details">Payment Method</label>
+                   <select name="payment_method" id="payment_method">
+                         <option value="paypal">PayPal</option>
+                         <option value="visa">Visa</option>
+                         <option value="mastercard">MasterCard</option>
+                         <option value="american_express">American Express</option>
+                    </select>
+               </div>
                 
                 <div class="input-box">
                     <span class="details">shipping date</span>
