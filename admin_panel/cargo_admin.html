@@ -14,7 +14,7 @@
      <div class="form-container">
      <div class="container">
              <div class="title">Add cargo </div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="add_cargo.php" method="post" enctype="multipart/form-data">    
              <div class="user-details">
                          <div class="input-box">
                              <span class="details">cargo description </span>
@@ -34,11 +34,7 @@
                          </div>
                          <div class="input-box">
                              <span class="details">Ship ID</span>
-                             <input type="number" placeholder="Enter ship ID" id="shipID" name="shipID" required>
-                         </div>
-                         <div class="input-box">
-                             <span class="details">port ID</span>
-                             <input type="number" placeholder="Enter port ID" id="portID" name="portID" required>
+                             <input type="text" id="shipID" name="shipID" required>
                          </div>
              </div>
              <div class="button">
@@ -57,24 +53,14 @@
                              <th>cargo weight </th>
                              <th>container type </th>
                              <th>ship ID</th>
-                             <th>port ID </th>
                              <th>action</th>
                          </tr>
                      </thead>
-                        <tr>
-                           <td>electronics</td>
-                           <td>2000 peice</td>
-                           <td>30000</td>
-                           <td>xyz</td>
-                           <td>5</td>
-                           <td>1</td>
-                           <td>
-                               <a href="cargo_update.html" class="btn"><i class="fas fa-edit"></i>edit</a>
-                               <a href="cargo_admin.html" class="btn"><i class="fas fa-trash"></i>delete</a>
-                           </td>
-                       </tr>
+                     <tbody id="cargoTableBody">
+                    </tbody>
                </table>
+
               </div>
-     </div>
+     </div>   
  </body>
 </html>

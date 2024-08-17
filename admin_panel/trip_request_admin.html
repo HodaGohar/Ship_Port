@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Admin page</title>
+     <!-- font awesome cdn link -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+     <!-- css link  -->
+     <link rel="stylesheet" href="login.css">
+ </head>
+ <body class="crew">
+ <div class="admin-crew">
+     <div class="form-container">
+     <div class="container">
+             <div class="title">Add trip request </div>
+            <form action="add_trip_request.php" method="post" enctype="multipart/form-data">
+             <div class="user-details">
+                        <div class="input-box">
+                            <label for="registerID" class="details">Register ID</label>
+                            <input type="text" name="registerID" id="registerID" required>
+                        </div>
+                        <div class="input-box">
+                                <label for="tripID" class="details">Trip ID</label>
+                               <input type="text" name="tripID" id="tripID" required>
+                        </div>
+                       <div class="input-box">
+                             <label for="paymentStatus" class="details">payment Status</label>
+                            <select name="paymentStatus" id="paymentStatus">
+                                  <option value="Paid">Paid</option>
+                                  <option value="Unpaid">Unpaid</option>
+                                  <option value="Partially Paid">Partially Paid</option>
+                                  <option value="Overpaid">Overpaid</option>
+                                  <option value="Refunded">Refunded</option>
+                                  <option value="Cancelled">Cancelled</option>
+                                  <option value="Failed">Failed</option>
+                                  <option value="Pending">Pending</option>
+                             </select>
+                        </div>
+                        <div class="input-box">
+                             <label for="tripStatus" class="details"> trip Status</label>
+                            <select name="tripStatus" id="tripStatus">
+                                  <option value="Booked">Booked</option>
+                                  <option value="Confirmed">Confirmed</option>
+                                  <option value="Pending">Pending</option>
+                                  <option value="Cancelled">Cancelled</option>
+                                  <option value="Completed">Completed</option>
+                                  <option value="Cancelled">Cancelled</option>
+                                  <option value="In Progress">In Progress</option>
+                                  <option value="Rescheduled">Rescheduled</option>
+                                  <option value="Awaiting Payment">Awaiting Payment</option>
+                                  <option value="Awaiting Confirmation">Awaiting Confirmation</option>
+                                  <option value="Partially Completed">Partially Completed</option>
+                             </select>
+                        </div>
+             </div>
+             <div class="button">
+                         <input type="submit" name="add_request" value="add trip request">
+                         <a href="dashboard.php">go back</a>
+             </div>
+             </form>
+         </div>
+     </div>
+
+     <div class="crew-display">
+<table class="crew-display-table">
+    <thead>
+        <tr>
+            <th>user name</th>
+            <th>user email</th>
+            <th>user number</th>
+            <th>company name</th>
+            <th>company number</th>
+            <th>address</th>
+            <th>destination Port</th>
+            <th>booking Date</th>
+            <th>payment Status</th>
+            <th>trip Status</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody id="tripRequestTableBody">
+    </tbody>
+
+    </table>
+
+  </div>
+  </div>
+    
+ </body>
+</html>

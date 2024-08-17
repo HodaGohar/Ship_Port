@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+
+
+ <!DOCTYPE html>
  <html lang="en">
  <head>
      <meta charset="UTF-8">
@@ -14,15 +16,15 @@
      <div class="form-container">
      <div class="container">
              <div class="title">Add member of crew</div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="add_crew.php" method="post" enctype="multipart/form-data">
              <div class="user-details">
                          <div class="input-box">
                              <span class="details">crew Name</span>
-                             <input type="text" placeholder="Enter the name of crew" id="crewName" name="crewName" required>
+                             <input type="text" placeholder="Enter the name of ship" id="crewName" name="crewName" required>
                          </div>
                          <div class="input-box">
                              <span class="details">role</span>
-                             <input type="text" placeholder="Enter crew role" id="role" name="role" required>
+                             <input type="text" placeholder="Enter ship type" id="role" name="role" required>
                          </div>
                          <div class="input-box">
                              <span class="details">nationality</span>
@@ -38,7 +40,7 @@
                          </div>
                          <div class="input-box">
                              <span class="details">Ship ID</span>
-                             <input type="number" placeholder="Enter ship ID" id="shipID" name="shipID" required>
+                             <input type="text" id="shipID" name="shipID" required>
                          </div>
                          <div class="input-box">
                              <span class="details">Crew Image</span>
@@ -47,7 +49,7 @@
              </div>
              <div class="button">
                          <input type="submit" name="add_crew" value="Add member of crew">
-                         <a href="dashboard.html">go back</a>
+                         <a href="dashboard.php">go back</a>
              </div>
              </form>
          </div>
@@ -62,24 +64,18 @@
                              <th>nationality</th>
                              <th>join date</th>
                              <th>email</th>
+                             <th>shipID</th>
                              <th>action</th>
                          </tr>
                      </thead>
-                        <tr>
-                           <td><img src="images/crew5.jpg" height="100" alt=""></td>
-                           <td>ahmed</td>
-                           <td>engineer</td>
-                           <td>american</td>
-                           <td>7/7/2024</td>
-                           <td>mohamed@gmail.com</td>
-                           <td>
-                               
-                               <a href="crew_update.html" class="btn"><i class="fas fa-edit"></i>edit</a>
-                               <a href="crew_admin.html" class="btn"><i class="fas fa-trash"></i>delete</a>
-                           </td>
-                       </tr>
+                     <tbody id="crewTableBody">
+                     </tbody>
                </table>
+
               </div>
-     </div>    
+     </div>
+     <!-- <script src="dashboard_script.js"></script>  -->
+     <script src="crew.js"></script> 
+
  </body>
 </html>

@@ -9,6 +9,11 @@
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman';
 }
+#messageFeedback, #bookingFeedback {
+    color: red; /* or any color that is visible */
+    font-size: 16px;
+}
+
 
 html {
     font-size: 62.5%;

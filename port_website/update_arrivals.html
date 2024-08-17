@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Ship Arrival</title>
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="admin-crew centered">
+        <div class="container">
+            <div class="title">Update Ship Arrival</div>
+            <form id="updateArrivalForm" action="" method="post" enctype="multipart/form-data">
+                <input type="hidden" id="arrivalID" name="arrivalID">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Captain Name</span>
+                        <input type="text" placeholder="Enter the captain name" id="captainName" name="captainName" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Arrival Date</span>
+                        <input type="date" placeholder="Enter arrival date" id="arrivalDate" name="arrivalDate" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Departure Date</span>
+                        <input type="date" placeholder="Enter departure date" id="departureDate" name="departureDate" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Cargo Description</span>
+                        <input type="text" placeholder="Enter cargo description" id="cargoDescription" name="cargoDescription" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Arrival Status</span>
+                        <input type="text" placeholder="Enter arrival status" id="arrivalStatus" name="arrivalStatus" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Berth Allocated</span>
+                        <input type="text" placeholder="Enter berth allocated" id="berthAllocated" name="berthAllocated" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Ship ID</span>
+                        <input type="number" id="shipID" name="shipID" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Ship Image</span>
+                        <input type="file" accept=".jpg,.jpeg,.png" id="shipImg" name="shipImg">
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" name="update_arrival" class="btn" value="Update Ship Arrival">
+                    <a href="arrivals_admin.html">Go Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const updateForm = document.getElementById('updateArrivalForm');
+            const urlParams = new URLSearchParams(window.location.search);
+            const arrivalID = urlParams.get('arrivalID');
+
+            if (arrivalID) {
+                fetch(`update_arrival_table.php?arrivalID=${arrivalID}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // document.getElementById('arrivalID').value = data.arrivalID;
+                        document.getElementById('captainName').value = data.captainName;
+                        document.getElementById('arrivalDate').value = data.arrivalDate;
+                        document.getElementById('departureDate').value = data.departureDate;
+                        document.getElementById('cargoDescription').value = data.cargoDescription;
+                        document.getElementById('arrivalStatus').value = data.arrivalStatus;
+                        document.getElementById('berthAllocated').value = data.berthAllocated;
+                        document.getElementById('shipID').value = data.shipID;
+                    })
+                    .catch(error => console.error('Error fetching arrival data:', error));
+            }
+
+            updateForm.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                const formData = new FormData(this);
+
+                fetch('update_arrival.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log('Arrival updated successfully!');
+                        window.location.href = 'arrivals_admin.html';
+                    } else {
+                        console.error('Error:', data.error);
+                    }
+                })
+                .catch(error => console.error('Error updating arrival:', error));
+            });
+        });
+    </script>
+</body>
+</html>

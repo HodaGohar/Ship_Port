@@ -14,11 +14,11 @@
      <div class="form-container">
      <div class="container">
              <div class="title">Add member of users</div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="add_user.php" method="post" enctype="multipart/form-data">
              <div class="user-details">
                          <div class="input-box">
                              <span class="details">First Name</span>
-                             <input type="text" placeholder="Enter the first name of user" id="firstrName" name="lastName" required>
+                             <input type="text" placeholder="Enter the first name of user" id="firstName" name="firstName" required>
                          </div>
                          <div class="input-box">
                              <span class="details">Last Name</span>
@@ -56,13 +56,14 @@
                                 </label>
                             </div>
                         </div>
-                        <select name="user_type">
+                        <select name="userType">
                             <option value="user">user</option>
                             <option value="admin">admin</option>
                         </select>
              </div>
              <div class="button">
                          <input type="submit" name="add_user" value="Add member of users">
+                         <a href="dashboard.php">go back</a>
              </div>
              </form>
          </div>
@@ -78,22 +79,12 @@
                              <th>password</th>
                              <th>gender</th>
                              <th>type</th>
+                             <th>create date</th>
                              <th>action</th>
                          </tr>
                      </thead>
-                        <tr>
-                            <td>manar</td>
-                           <td>ahmed</td>
-                           <td>manar@gmail.com</td>
-                           <td>01099210633</td>
-                           <td>1234</td>
-                           <td>female</td>
-                           <td>admin</td>
-                           <td>
-                               <a href="user_update.html" class="btn"><i class="fas fa-edit"></i>edit</a>
-                               <a href="users_admin.html" class="btn"><i class="fas fa-trash"></i>delete</a>
-                           </td>
-                       </tr>
+                     <tbody id="tripTableBody">
+                     </tbody>
                </table>
               </div>
      </div>    

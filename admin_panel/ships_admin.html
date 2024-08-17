@@ -14,7 +14,7 @@
      <div class="form-container">
      <div class="container">
              <div class="title">Add ship </div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="add_ship.php" method="post" enctype="multipart/form-data">
              <div class="user-details">
                          <div class="input-box">
                              <span class="details">ship Name</span>
@@ -26,7 +26,7 @@
                          </div>
                          <div class="input-box">
                              <span class="details">max capacity</span>
-                             <input type="number" placeholder="Enter max capacity" id="maxCapacity" name="maxCapacity" required>
+                             <input type="text" placeholder="Enter max capacity" id="maxCapacity" name="maxCapacity" required>
                          </div>
                          <div class="input-box">
                              <span class="details">registration date</span>
@@ -34,7 +34,7 @@
                          </div>
                          <div class="input-box">
                              <span class="details">owner info</span>
-                             <input type="email" placeholder="Enter owner info" id="ownerInfo" name="ownerInfo" required>
+                             <input type="text" placeholder="Enter owner info" id="ownerInfo" name="ownerInfo" required>
                          </div>
                          <div class="input-box">
                              <span class="details">ship Image</span>
@@ -43,7 +43,7 @@
              </div>
              <div class="button">
                          <input type="submit" name="add_ship" value="Add ship">
-                         <a href="dashboard.html">go back</a>
+                         <a href="dashboard.php">go back</a>
              </div>
              </form>
          </div>
@@ -61,21 +61,12 @@
                              <th>action</th>
                          </tr>
                      </thead>
-
-                        <tr>
-                           <td><img src="images/port1.jpg" height="100" alt=""></td>
-                           <td>XYZ ship</td>
-                           <td>passenger ship</td>
-                           <td>50000</td>
-                           <td>1/6/2024</td>
-                           <td>MSC Oscar</td>
-                           <td>
-                               <a href="ships_update.html" class="btn"><i class="fas fa-edit"></i>edit</a>
-                               <a href="ships_admin.html" class="btn"><i class="fas fa-trash"></i>delete</a>
-                           </td>
-                       </tr>
+                     <tbody id="shipTableBody">
+                    </tbody>
                </table>
+
               </div>
-     </div>   
+     </div>
+    
  </body>
 </html>

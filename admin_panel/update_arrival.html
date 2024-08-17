@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,35 +15,35 @@
 <div class="container ">
 
             <div class="title">update ship arrival</div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="update_arrival.php" method="post" enctype="multipart/form-data">
             <div class="user-details">
                         <div class="input-box">
                             <span class="details">captain Name</span>
-                            <input type="text" placeholder="Enter the captain name" id="captainName" value="" name="captainName" required>
+                            <input type="text" placeholder="Enter the captain name" id="captainName" name="captainName" required>
                         </div>
                         <div class="input-box">
                             <span class="details">arrival date</span>
-                            <input type="date" placeholder="Enter arrival date" id="arrivalDate" value="" name="arrivalDate" required>
+                            <input type="date" placeholder="Enter arrival date" id="arrivalDate"  name="arrivalDate" required>
                         </div>
                         <div class="input-box">
                             <span class="details">departure date</span>
-                            <input type="date" placeholder="Enter departure date" id="departureDate" value="" name="departureDate" required>
+                            <input type="date" placeholder="Enter departure date" id="departureDate" name="departureDate" required>
                         </div>
                         <div class="input-box">
                             <span class="details">cargo description </span>
-                            <input type="text" placeholder="Enter cargo description" id="cargoDescription" value="" name="cargoDescription" required>
+                            <input type="text" placeholder="Enter cargo description" id="cargoDescription" name="cargoDescription" required>
                         </div>
                         <div class="input-box">
                             <span class="details">arrival status</span>
-                            <input type="text" placeholder="Enter arrival status" id="arrivalStatus" value="" name="arrivalStatus" required>
+                            <input type="text" placeholder="Enter arrival status" id="arrivalStatus"  name="arrivalStatus" required>
                         </div>
                         <div class="input-box">
                             <span class="details">berth allocated</span>
-                            <input type="text" placeholder="Enter berth allocated" id="berthAllocated" value="" name="berthAllocated" required>
+                            <input type="text" placeholder="Enter berth allocated" id="berthAllocated" name="berthAllocated" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Ship ID</span>
-                            <input type="number" placeholder="Enter ship ID" id="shipID" value="" name="shipID" required>
+                            <input type="number" id="shipID"  name="shipID" required>
                         </div>
                 
                         <div class="input-box">
@@ -52,12 +53,10 @@
             </div>
             <div class="button">
                         <input type="submit" class="btn" name="update_arrival" value="update ship arrival">
-                        <a href="add_arrivals.html">go back</a>
+                        <a href="arrivals_admin.html">go back</a>
             </div>
             </form>
-
         </div>
 </div>
-
 </body>
 </html>

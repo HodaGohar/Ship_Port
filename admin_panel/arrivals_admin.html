@@ -14,7 +14,7 @@
      <div class="form-container">
      <div class="container">
              <div class="title">Add ship arrival</div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="add_arrival.php" id="addArrivalForm" method="post" enctype="multipart/form-data">
              <div class="user-details">
                          <div class="input-box">
                              <span class="details">Captain Name</span>
@@ -42,7 +42,7 @@
                          </div>
                          <div class="input-box">
                              <span class="details">Ship ID</span>
-                             <input type="number" placeholder="Enter ship ID" id="shipID" name="shipID" required>
+                             <input type="number" id="shipID" name="shipID" required>
                          </div>
                          <div class="input-box">
                              <span class="details">ship Image</span>
@@ -56,37 +56,24 @@
              </form>
          </div>
      </div>
-              <div class="crew-display">
-                 <table class="crew-display-table">
-                     <thead>
-                         <tr>
-                             <th>ship image</th>
-                             <th>captain name</th>
-                             <th>arrival date</th>
-                             <th>departure date</th>
-                             <th>cargo description</th>
-                             <th>arrival status</th>
-                             <th>berth allocated</th>
-                             <th>action</th>
-                         </tr>
-                     </thead>
-                        <tr>
-                           <td><img src="images/port3.jpg" height="100" alt=""></td>
-                           <td>mohamed</td>
-                           <td>24/5/2023</td>
-                           <td>27/5/2023</td>
-                           <td>electronics</td>
-                           <td>arrived</td>
-                           <td>RV atlantis</td>
-                           <td>
-                               <a href="arrival_update.html" class="btn"><i class="fas fa-edit"></i>edit</a>
-                               <a href="add_arrivals.html" class="btn"><i class="fas fa-trash"></i>delete</a>
-                           </td>
-                       </tr>
-               </table>
-
-              </div>
-     </div>
-    
- </body>
+<div class="crew-display">
+    <table class="crew-display-table" >
+        <thead>
+            <tr>
+                <th>Ship Image</th>
+                <th>Captain Name</th>
+                <th>Arrival Date</th>
+                <th>Departure Date</th>
+                <th>Cargo Description</th>
+                <th>Arrival Status</th>
+                <th>Berth Allocated</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="arrivalTableBody">
+        </tbody>
+    </table>
+</div>
+<script src="dashboard_script.js"></script>
+</body>
 </html>

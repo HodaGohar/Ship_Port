@@ -7,6 +7,7 @@
     text-decoration: none;
     font-family: Georgia, 'Times New Roman';
 }
+
 .dashboard {
     background-color: #fff;
     display: flex;
@@ -329,7 +330,7 @@ form .button input:hover{
     color: #333;
 }
 .page .container .content h3 span{
-    background: rgb(27, 54, 95);
+    background: rgb(56, 105, 179);
     color: #fff;
     border-radius: 5px;
     padding: 0 15px;
@@ -339,7 +340,7 @@ form .button input:hover{
     color: #333;
 }
 .page .container .content h1 span{
-    color: rgb(18, 82, 125);
+    color: rgb(56, 105, 179);
 }
 .page .container .content p{
     font-size: 25px;
@@ -356,7 +357,7 @@ form .button input:hover{
     text-transform: capitalize;
 }
 .page .container .content .btn:hover{
-    background: rgb(19, 61, 125);
+    background: rgb(56, 105, 179);
 }
 .container form p{
     margin-bottom: 5px;
@@ -429,6 +430,46 @@ form .button input:hover{
     text-align: center;
     font-size: 30px;
 }
+
+body.crew.learn-more {
+    background:#000;
+    height: auto;
+}
+.learn-more .admin-crew .container{
+    box-shadow: 0 0 10px 0 rgb(57, 137, 207);
+    background: #000;
+    color: #fff;
+}
+.learn-more .admin-crew .container .title{
+    padding-bottom: 5px;
+}
+.learn-more .admin-crew .container .button a{
+    color: #fff;
+}
+
+.info {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+  
+  .info p {
+    padding-bottom: 10px; 
+    margin-bottom: 25px; 
+    color: #cdced0;
+    font-size: 20px;
+  }
+  
+  .info h2 {
+    font-weight: bold; 
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(176, 195, 231, 0.915);
+    font-size: 35px;
+    /* border-bottom: 1px solid #fdfdfd;  */
+
+  }
 
 @media (max-width: 991px){
     html{
